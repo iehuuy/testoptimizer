@@ -6,70 +6,7 @@ def func(search_vector):
     return [
         search_vector[0]**2 + search_vector[1]**2
         ]
-    '''
-def func(search_vector):
-    return [
-    search_vector[0]*search_vector[1]
-        ]
-    '''
-'''
-def cal_feasible_area(feasible_search_vector_list):
 
-    representative_feasible_serch_vector_list = [[0,0]]
-
-    for feasible_search_vector in feasible_search_vector_list:
-
-        print "feasible_search_vector : " + str(feasible_search_vector)
-        print ""
-        print "before representative_feasible_serch_vector_list : " + str(representative_feasible_serch_vector_list)
-        print ""
-        insert_flag = 0
-
-        for representative_feasible_serch_vector in representative_feasible_serch_vector_list:
-            print "representative_feasible_serch_vector: " + str(representative_feasible_serch_vector)
-            print ""
-            
-            if feasible_search_vector[0] == representative_feasible_serch_vector[0] and feasible_search_vector[1] == representative_feasible_serch_vector[1]:
-                print "1"
-            elif feasible_search_vector[0] < representative_feasible_serch_vector[0] and feasible_search_vector[1] > representative_feasible_serch_vector[1]:
-                if insert_flag == 0:
-                    representative_feasible_serch_vector_list.append(feasible_search_vector)
-                    insert_flag = 1
-                print "2"
-
-            elif feasible_search_vector[0] > representative_feasible_serch_vector[0] and feasible_search_vector[1] < representative_feasible_serch_vector[1]:
-                if insert_flag == 0:
-                    representative_feasible_serch_vector_list.append(feasible_search_vector)
-                    insert_flag = 1
-                
-            elif feasible_search_vector[0] >= representative_feasible_serch_vector[0] and feasible_search_vector[1] >= representative_feasible_serch_vector[1] :
-                if insert_flag == 0:
-                    representative_feasible_serch_vector_list.append(feasible_search_vector)
-                    insert_flag = 1
-                representative_feasible_serch_vector_list.remove(representative_feasible_serch_vector)
-                print "4"
-                
-        print "middle representative_feasible_serch_vector : " + str(representative_feasible_serch_vector_list)
-        print ""
-
-        for representative_feasible_serch_vector in representative_feasible_serch_vector_list:
-            for representative_feasible_serch_vector2 in representative_feasible_serch_vector_list:
-                print representative_feasible_serch_vector2
-                if representative_feasible_serch_vector[0] == representative_feasible_serch_vector2[0] and representative_feasible_serch_vector[1] == representative_feasible_serch_vector2[1]:
-                    continue
-                if representative_feasible_serch_vector[0] <= representative_feasible_serch_vector2[0] and representative_feasible_serch_vector[1] <= representative_feasible_serch_vector2[1]:
-                    representative_feasible_serch_vector_list.remove(representative_feasible_serch_vector)
-                elif representative_feasible_serch_vector[0] >= representative_feasible_serch_vector2[0] and representative_feasible_serch_vector[1] >= representative_feasible_serch_vector2[1]:
-                    representative_feasible_serch_vector_list.remove(representative_feasible_serch_vector2)
-
-            print "after representative_feasible_serch_vector : " + str(representative_feasible_serch_vector_list)
-
-            print ""
-            print ""
-            
-            sorted_representative_feasible_serch_vector_list = sorted(representative_feasible_serch_vector_list,key=lambda x:x[1],reverse=False)
-            print sorted_representative_feasible_serch_vector_list
-'''
 def cal_feasible_area(initial_search_vector,feasible_search_vector_list):
 
     representative_feasible_serch_vector_list = []
